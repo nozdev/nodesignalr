@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const http = require('http').createServer(app);
 const signalR = require('./signalr')(http);
-const port = process.env.PORT||3000;
+const port = process.env.PORT;
 
 const chat = signalR.mapHub('/chat');
 const clock = signalR.mapHub('/clock');
